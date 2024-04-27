@@ -1,0 +1,5 @@
+/vendor/
+.pulumi
+Pulumi.*.yaml
+
+**/command-output/
