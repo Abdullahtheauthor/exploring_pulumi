@@ -17,57 +17,6 @@ const vpc = new awsx.ec2.Vpc("vpc",{
     ],
 });
 
-exports.vpcId = vpc.vpcId;
-exports.privateSubnetIds = vpc.privateSubnetIds;
-exports.publicSubnetIds = vpc.publicSubnetIds;
-
-// // Create an Internet Gateway and attach it to the Default VPC.
-// const gateway = new aws.ec2.InternetGateway("gateway", {
-//     vpcId: vpc.vpcId,
-// });
-
-// // Create a public Subnet. AWS selects an available CIDR block in the VPC range.
-// const publicSubnet = new aws.ec2.Subnet("publicSubnet", {
-//     vpcId: vpc.vpcId,
-//     mapPublicIpOnLaunch: true, // ensures instances receive a public IP
-//     availabilityZone: "eu-central-1a", // choose an appropriate availability zone
-// });
-
-// // Create a Route Table for the public Subnet, including a route to the Internet Gateway.
-// const publicRouteTable = new aws.ec2.RouteTable("publicRouteTable", {
-//     vpcId: vpc.vpcId,
-//     routes: [{
-//         cidrBlock: "0.0.0.0/0",
-//         gatewayId: gateway.id,
-//     }],
-// });
-
-// // Associate the public Route Table with the public Subnet.
-// const publicRouteTableAssociation = new aws.ec2.RouteTableAssociation("publicRouteTableAssociation", {
-//     subnetId: publicSubnet.id,
-//     routeTableId: publicRouteTable.id,
-// });
-
-
-// // Create a private Subnet in the same way, without mapping public IPs.
-// const privateSubnet = new aws.ec2.Subnet("privateSubnet", {
-//     vpcId: vpc.vpcId,
-//     availabilityZone: "eu-central-2b", // another availability zone for the private subnet
-// });
-
-// // Create a private Route Table. Do not add a route to the Internet Gateway, as this is a private subnet.
-// const privateRouteTable = new aws.ec2.RouteTable("privateRouteTable", {
-//     vpcId: vpc.vpcId,
-// });
-
-// // Associate the private Route Table with the private Subnet.
-// const privateRouteTableAssociation = new aws.ec2.RouteTableAssociation("privateRouteTableAssociation", {
-//     subnetId: privateSubnet.id,
-//     routeTableId: privateRouteTable.id,
-// });
-
-
-
 
 
 // SG
@@ -92,25 +41,10 @@ const securityGroup = new aws.ec2.SecurityGroup("group", {
     ],
 });
 
-
-
-
-// ecr
-const repository = new awsx.ecr.Repository("repository", {
-    name: "nginx_server",
-    forceDelete: true,
-});
-
-const image = new awsx.ecr.Image("image", {
-    repositoryUrl: repository.url,
-    context: "../web/.",
-    platform: "linux/amd64",
-    imageName: "1",
-
-});
+console.log(vpc.vpcId);
+exports.SgId = securityGroup.id 
 
 // Loadbalancer
-
 const lb = new awsx.lb.ApplicationLoadBalancer("lb", {
     
     listener: {
@@ -122,34 +56,10 @@ const lb = new awsx.lb.ApplicationLoadBalancer("lb", {
     subnetIds: vpc.publicSubnetIds,
 });
 
-// // esc
-const cluster = new aws.ecs.Cluster("cluster");
-const service = new awsx.ecs.FargateService("service", {
-    cluster: cluster.arn,
-    networkConfiguration: {
-        subnets: vpc.privateSubnetIds,
-        securityGroups: [securityGroup.id],
-    },
-    desiredCount: 2,
-    taskDefinitionArgs: {
-        container: {
-            name: "my-service",
-            image: image.imageUri,
-            cpu: 128,
-            memory: 512,
-            essential: true,
-            portMappings: [
-                {
-                    containerPort: 80,
-                    targetGroup: lb.defaultTargetGroup,
-                },
-            ],
-        },
-    },
-});
-exports.url = repository.url;
-exports.endpoint = lb.loadBalancer.dnsName;
-exports.url = pulumi.interpolate`http://${lb.loadBalancer.dnsName}`;
+exports.vpcId = vpc.vpcId;
+exports.privateSubnetIds = vpc.privateSubnetIds;
+exports.publicSubnetIds = vpc.publicSubnetIds;
+exports.tg =lb.defaultTargetGroup
 // // // export const vpcId = vpc.id;
 // // // export const publicSubnetId = publicSubnet.id;
 // // // export const privateSubnetId = privateSubnet.id;
