@@ -40,5 +40,5 @@ jobs:
         REPOSITORY: nginx_pr
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./web/.
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
