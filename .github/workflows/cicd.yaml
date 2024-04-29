@@ -2,8 +2,8 @@ name: Build Docker Container
 
 on:
   push:
-    paths:
-      - 'web/index.html'  
+    # paths:
+    #   - 'web/index.html'  
 
 env:
     AWS_REGION : eu-central-1 
@@ -47,7 +47,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         IMAGE_TAG: ${{ github.sha }}
-     run: |
+      run: |
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
