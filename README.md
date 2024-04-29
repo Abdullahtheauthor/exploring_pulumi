@@ -1,22 +1,23 @@
-# Create Infrastructure and Deploying a simple ngnix app on ECS using Pulumi javascript
+# Create Infrastructure and Deploying a contianer using Pulumi javascript
 Configure your AWS credentials and region environment variables to be able to build the infrasrtrucure.
 
 This repo offers a solution of automating the creation of simple infra and deplying tha a simpe nginx app in AWS ECS using Pulumi javascript. The infra includes the following:
+- VP, with defined SG.
 -  ECS: To deploy the app too.
 -  Application Load Balancer
 -  ECR: To store the image in private repo.
   
 ## Overview:
 The solution is divided into three folders:
-- Stack (Pulumi js) in ./infra, which deploys the basic infrastructure of the solution. It includes VPC, security groups and a Application Loadbalancer.
-- Stack (Pulumi js) in ./app, which deploys the ecr, builds, and push the image to private repo. Then, it deploys the container from that image into ECS.
+- Stack (Pulumi js) in [infra](./infra), which deploys the basic infrastructure of the solution. It includes VPC, security groups and a Application Loadbalancer.
+- Stack (Pulumi js) in [app](./app), which deploys the ecr, builds, and push the image to private repo. Then, it deploys the container from that image into ECS.
 - Workflow file (Github actions), to deploy the app to ECS depending on the conditions required.
 
-## Architecture:
-1. A VPC that has the two security groups. One for the Loadbalancer(ALB), and the other is for AWS ECS (In stack, ./infra).
-2. A LoadBalancer (ALB), which only allow access to an IP that you can set in a variable; for security measurments (In stack, ./infra).
-3. ECR, Where we push our image to (In stack, ./app).
-4. ECS, Where the app is deployed to as a container (In stack, ./app).
+## Architecture in details:
+1. A VPC that has the two security groups. One for the Loadbalancer(ALB), and the other is for AWS ECS (In stack, [infra](./infra)).
+2. A LoadBalancer (ALB), which only allow access to an IP that you can set in a variable; for security measurments (In stack, [infra](./infra)).
+3. ECR, Where we push our image to [app](./app)
+4. ECS, Where the app is deployed to as a container [app](./app).
    
 
 
@@ -49,11 +50,11 @@ The solution is divided into three folders:
 
 
 
-# Improvements:
+## Improvements:
 - We can create a dns record with proper naming and domain names usig route53, instead of using the dns of ALB.
 - If tha application will be accessible for certain users (Office), we can apply WAF on ALB, or even create API GW with cognito for authentication and authoriztion infront of ALB.
 
-# Alternative Architectures:
+## Alternative Architectures:
 1. Using Ec2, manged by Devops team, instead of fargate serverless. This will give us more control. I didn't go for this approach, as it'd make the solution more comlex.
 2. Instead of ECS, We can Auto Scaling group with Ec2, that has docker installed on it, and has role with permissions to pull images from ECR. Infornt of them, we have the same ALB.
 3. Instead of ECS, we can use EKS. I didn't choose this option, as the app is simple and it isn't going to use the capabilities EKS offers; so it'd be overengineering.
