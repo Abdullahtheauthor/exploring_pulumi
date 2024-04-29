@@ -18,7 +18,7 @@ The solution is divided into three folders:
 3. ECR, Where we push our image to (In stack, ./app).
 4. ECS, Where the app is deployed to as a container (In stack, ./app).
 
-![Image](arch.drawio)
+![Image](arch.png)
 
 # Using this repo in details:
 1. you need to set uo your aws profile in your terminal using Env variables:
