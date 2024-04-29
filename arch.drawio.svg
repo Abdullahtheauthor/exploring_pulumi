@@ -1,104 +1,227 @@
-<mxfile host="65bd71144e">
-    <diagram id="Uy1qT0BCZqhUBXl-3H6h" name="Page-1">
-        <mxGraphModel dx="777" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-                    <mxGeometry x="240" y="60" width="500" height="500" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.application_load_balancer;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="280" y="255" width="69" height="72" as="geometry"/>
-                </mxCell>
-                <mxCell id="5" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-                    <mxGeometry x="410" y="150" width="270" height="270" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ecr;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="610" y="272.75" width="40" height="36.5" as="geometry"/>
-                </mxCell>
-                <mxCell id="10" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ecs;fillColor=#F58534;gradientColor=none;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="440" y="258" width="72" height="67.5" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="" style="endArrow=classic;html=1;movable=1;fixDash=0;flowAnimation=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6" target="10">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="512" y="291.25" as="sourcePoint"/>
-                        <mxPoint x="650" y="280" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="12" value="ECR" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="11">
-                    <mxGeometry x="-1" relative="1" as="geometry">
-                        <mxPoint x="10" y="-18" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="13" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.github_code;pointerEvents=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="610" y="605" width="50" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="13" target="6">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="420" y="410" as="sourcePoint"/>
-                        <mxPoint x="470" y="360" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="19" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/laptop_client.svg;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="10" y="262" width="45" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;flowAnimation=1;" edge="1" parent="1" source="19" target="3">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="120" y="322" as="sourcePoint"/>
-                        <mxPoint x="170" y="272" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="22" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;flowAnimation=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="10">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="349" y="286.37" as="sourcePoint"/>
-                        <mxPoint x="574" y="285.50294797687866" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="23" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.containers.userMale;strokeColor=#666666;strokeColor2=#008cff;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="325" y="580" width="100" height="100" as="geometry"/>
-                </mxCell>
-                <mxCell id="25" value="" style="endArrow=classic;html=1;movable=1;fixDash=0;flowAnimation=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="23" target="13">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="548" y="620" as="sourcePoint"/>
-                        <mxPoint x="450" y="620.5485074626865" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="26" value="Developer" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="25">
-                    <mxGeometry x="-1" relative="1" as="geometry">
-                        <mxPoint x="-76" y="80" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="27" value="Github Actions" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="610" y="690" as="geometry"/>
-                </mxCell>
-                <mxCell id="28" value="ALB" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="300" y="350" as="geometry"/>
-                </mxCell>
-                <mxCell id="29" value="ECS" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="460" y="350" as="geometry"/>
-                </mxCell>
-                <mxCell id="30" value="Client" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="310" y="360" as="geometry">
-                        <mxPoint x="-288" y="-24" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="31" value="App side in AWS" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="420" y="170" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="AWS Account" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="240" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="33" value="request&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; background-color: rgb(42, 37, 47);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; background-color: rgb(42, 37, 47);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="420" y="300" as="geometry">
-                        <mxPoint x="-288" y="-24" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="34" value="response" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="1">
-                    <mxGeometry x="420" y="340" as="geometry">
-                        <mxPoint x="-288" y="-24" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-</mxfile>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="731px" height="649px" viewBox="-0.5 -0.5 731 649" content="&lt;mxfile&gt;&lt;diagram id=&quot;Uy1qT0BCZqhUBXl-3H6h&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="230" y="0" width="500" height="500" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 304.34 267 C 286.11 267 270 252.09 270 232.8 L 270 228.88 C 270 213.27 283.07 195 304.6 195 C 323.54 195 339 210.45 339 229.21 L 338.98 232.3 C 338.98 251.95 323.3 267 304.34 267 Z" fill="#f58534" stroke="none" pointer-events="all"/>
+        <path d="M 339 229.21 L 338.98 232.3 C 338.98 251.97 323.3 267 304.34 267 C 286.11 267 270 252.08 270 232.8 L 270 228.88 C 270 246.94 283.2 264.06 304.84 264.06 C 324.26 264.06 339 248.06 339 229.21 Z" fill-opacity="0.3" fill="#000000" stroke="none" pointer-events="all"/>
+        <rect x="270" y="195" width="0" height="0" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 278.43 248.21 L 278.43 237.98 L 282.62 237.98 L 282.62 229.14 L 289.08 229.14 L 289.08 221.2 L 303.59 221.2 L 303.59 214.2 L 294.43 214.2 L 294.43 201.64 L 314.56 201.64 L 314.56 214.2 L 305.41 214.2 L 305.41 221.2 L 319.55 221.2 L 319.55 229.14 L 325.96 229.14 L 325.96 237.98 L 330.14 237.98 L 330.14 248.21 L 319.94 248.21 L 319.94 237.98 L 324.11 237.98 L 324.11 230.97 L 313.06 230.97 L 313.06 237.98 L 317.23 237.98 L 317.23 248.21 L 307.03 248.21 L 307.03 237.98 L 311.22 237.98 L 311.22 229.14 L 317.7 229.14 L 317.7 223.05 L 290.92 223.05 L 290.92 229.14 L 297.36 229.14 L 297.36 237.98 L 301.55 237.98 L 301.55 248.21 L 291.33 248.21 L 291.33 237.98 L 295.51 237.98 L 295.51 230.97 L 284.45 230.97 L 284.45 237.98 L 288.64 237.98 L 288.64 248.21 Z" fill="#ffffff" stroke="none" pointer-events="all"/>
+        <rect x="400" y="90" width="270" height="270" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 620.04 249.25 C 609.24 249.25 600 241.44 600 232.07 L 600 230.14 C 600 220.6 608.85 212.75 620.38 212.75 C 630.56 212.75 640 220.36 640 229.95 L 640 231.84 C 640 241.15 631.36 249.25 620.04 249.25 Z" fill="#f58534" stroke="none" pointer-events="all"/>
+        <path d="M 600 230.14 C 600 239.75 608.77 247.75 619.97 247.75 C 629.82 247.75 640 241.17 640 229.95 L 640 231.84 C 640 241.17 631.34 249.25 620.04 249.25 C 609.25 249.25 600 241.47 600 232.07 Z" fill-opacity="0.3" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 611.87 243.29 L 611.87 235.71 L 628.26 235.71 L 628.26 243.29 Z" fill-opacity="0.3" fill="#ffffff" stroke="none" pointer-events="all"/>
+        <rect x="600" y="212.75" width="0" height="0" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 618.58 227.51 L 617.69 220.85 C 619.14 221.72 620.89 221.72 622.32 220.85 L 621.43 227.52 C 620.53 227.1 619.59 227.07 618.58 227.51 Z M 619.99 219.01 C 620.8 219.01 621.25 218.44 621.25 217.94 C 621.25 217.32 620.69 216.83 620.01 216.83 C 619.3 216.83 618.75 217.32 618.75 217.92 C 618.75 218.55 619.33 219.01 619.99 219.01 Z M 619.98 220.86 C 618.15 220.86 616.64 219.55 616.64 217.89 C 616.64 216.5 617.94 214.98 620.05 214.98 C 621.41 214.98 623.36 215.92 623.36 218.02 C 623.36 219.35 622.03 220.86 619.98 220.86 Z M 628.89 230.42 L 632.64 235.31 L 631.58 236.06 L 627.37 232.49 L 621.72 232.01 C 623.15 231.09 623.35 229.58 622.58 228.48 Z M 620.03 230.59 C 620.47 230.59 620.86 230.24 620.86 229.86 C 620.86 229.4 620.46 229.1 619.98 229.1 C 619.51 229.1 619.14 229.47 619.14 229.82 C 619.14 230.27 619.52 230.59 620.03 230.59 Z M 620 231.92 C 618.6 231.92 617.62 230.89 617.62 229.88 C 617.62 228.53 618.88 227.77 619.98 227.77 C 621.11 227.77 622.37 228.56 622.37 229.89 C 622.37 230.97 621.33 231.92 620 231.92 Z M 607.37 235.31 L 611.12 230.42 L 617.42 228.48 C 616.5 229.85 617.11 231.26 618.28 232.01 L 612.63 232.49 L 608.42 236.06 Z M 626.45 235.95 L 626.45 242.97 L 627.76 242.97 L 627.76 235.95 Z M 624.08 235.95 L 624.08 242.97 L 625.39 242.97 L 625.39 235.95 Z M 621.71 235.95 L 621.71 242.97 L 623.03 242.97 L 623.03 235.95 Z M 619.34 235.95 L 619.34 242.97 L 620.66 242.97 L 620.66 235.95 Z M 616.97 242.97 L 618.29 242.97 L 618.29 235.95 L 616.97 235.95 Z M 614.61 242.97 L 615.92 242.97 L 615.92 235.95 L 614.61 235.95 Z M 612.24 242.97 L 613.55 242.97 L 613.55 235.95 L 612.24 235.95 Z M 611.38 243.61 L 611.38 235.26 L 628.68 235.26 L 628.68 243.61 Z" fill="#ffffff" stroke="none" pointer-events="all"/>
+        <path d="M 451.96 249.94 L 462.26 248.23 L 462.26 238.56 L 470.61 238 L 470.61 238.03 L 470.61 225.76 L 462.26 225.15 L 462.26 215.17 L 451.96 213.41 Z M 442.78 265.5 L 438.03 263.11 L 438.03 260 L 433.85 260.95 L 430 259.03 L 430 204.47 L 433.85 202.55 L 438.03 203.5 L 438.03 200.38 L 442.78 198 L 477.34 207.82 L 479.92 207.2 L 488.86 209.92 L 488.86 213.27 L 496.1 212.09 L 502 213.91 L 502 225.85 L 484.78 226.64 L 483.18 226.55 L 483.18 237.18 L 484.78 237.09 L 502 237.89 L 502 249.8 L 496.1 251.64 L 488.86 250.45 L 488.86 253.79 L 479.92 256.52 L 477.1 255.85 Z" fill="#f58534" stroke="none" pointer-events="all"/>
+        <path d="M 478.67 226.29 L 478.67 225.2 L 488.86 224.47 L 488.86 213.27 L 496.1 212.09 L 496.1 225.27 Z M 476.74 238.41 L 470.61 238.03 L 470.61 225.76 L 476.74 225.33 Z M 488.86 250.45 L 488.86 239.24 L 478.67 238.55 L 478.67 237.44 L 496.1 238.45 L 496.1 251.64 Z M 451.96 210.89 L 462.26 212.86 L 462.26 211.41 L 479.92 207.2 L 479.92 223.68 L 462.26 225.15 L 462.26 215.17 L 451.96 213.41 Z M 451.96 252.32 L 451.96 249.94 L 462.26 248.23 L 462.26 238.56 L 479.92 240.15 L 479.92 256.52 L 462.26 252.32 L 462.26 250.39 Z M 438.03 263.11 L 438.03 200.38 L 442.78 198 L 442.78 265.5 Z M 433.85 260.95 L 430 259.03 L 430 204.47 L 433.85 202.55 Z" fill-opacity="0.3" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 478.67 237.44 L 484.78 237.09 L 502 237.89 L 496.1 238.45 Z M 462.26 238.56 L 470.61 238 L 488.86 239.24 L 479.92 240.15 Z" fill-opacity="0.3" fill="#ffffff" stroke="none" pointer-events="all"/>
+        <path d="M 478.67 226.29 L 496.1 225.27 L 502 225.85 L 484.78 226.64 Z M 462.26 225.15 L 479.92 223.68 L 488.86 224.47 L 470.61 225.76 Z" fill-opacity="0.5" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 600 231 L 508.37 231.51" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 503.12 231.54 L 510.1 228 L 508.37 231.51 L 510.14 235 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 211px; margin-left: 612px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                ECR
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="612" y="211" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    ECR
+                </text>
+            </switch>
+        </g>
+        <rect x="600" y="545" width="50" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 600 570 C 600 556.19 611.19 545 625 545 C 638.81 545 650 556.19 650 570 C 650 583.81 638.81 595 625 595 C 611.19 595 600 583.81 600 570 Z M 602.4 570 C 602.34 580.01 608.9 588.85 618.5 591.7 L 618.5 587.35 C 618.59 585.79 619.41 584.37 620.7 583.5 C 616.9 583.08 613.47 581.4 611.22 578.85 C 608.98 576.3 608.1 573.1 608.8 570 C 609.16 567.85 610.07 565.84 611.45 564.15 C 610.6 561.98 610.67 559.56 611.65 557.45 C 614.18 557.55 616.6 558.52 618.5 560.2 C 622.71 558.74 627.28 558.72 631.5 560.15 C 633.43 558.47 635.89 557.51 638.45 557.45 C 639.44 559.65 639.52 562.15 638.65 564.4 C 639.95 566.03 640.83 567.95 641.2 570 C 641.9 573.09 641.03 576.28 638.79 578.83 C 636.55 581.38 633.14 583.07 629.35 583.5 C 630.57 584.28 631.39 585.56 631.6 587 L 631.6 591.8 C 641.21 588.92 647.76 580.03 647.65 570 C 647.65 564.01 645.26 558.26 641.01 554.04 C 636.75 549.81 630.99 547.46 625 547.5 C 619.02 547.47 613.27 549.83 609.03 554.05 C 604.78 558.28 602.4 564.02 602.4 570 Z" fill="#00bef2" stroke="none" pointer-events="all"/>
+        <path d="M 625 545 L 620.11 255.62" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 620.02 250.37 L 623.64 257.31 L 620.11 255.62 L 616.64 257.43 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <image x="-0.5" y="201.5" width="45" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTE5Ljk1NyIgaGVpZ2h0PSI1ODEuMTgyIiB2aWV3Qm94PSIwIDAgMTM3LjU3MiAxNTMuNzcxIj48c3R5bGU+PCFbQ0RBVEFbLkJ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0b31dXT48L3N0eWxlPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iQSIgeDE9Ijc4Ljc1NSIgeTE9IjIxMS43MjciIHgyPSI3OC4zNTgiIHkyPSIxNjQuNjY5IiB4bGluazpocmVmPSIjRiI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGU3Y2ZjIiBzdG9wLW9wYWNpdHk9Ii45OTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4OGM2ZmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iQiIgeDE9IjEwOC43MjkiIHkxPSIyMDAuMjY4IiB4Mj0iMTA3Ljk2MSIgeTI9IjEzOS40MzgiIHhsaW5rOmhyZWY9IiNGIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiY2U2ZmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGE2ZmMiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iQyIgeDE9IjE0Mi40NjMiIHkxPSIyMTAuMTk0IiB4Mj0iMTQzLjQ1MyIgeTI9Ijk2LjgwMSIgeGxpbms6aHJlZj0iI0YiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAzMjA5OCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzkyYmVmOSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJEIiB4MT0iMTMwLjYxNiIgeTE9IjE3My42NTMiIHgyPSIxMzEuMjA2IiB5Mj0iNjcuMjUzIiB4bGluazpocmVmPSIjRiI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDI3NGZjIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGFjNmZkIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IkUiIHgxPSIxMzQuNDI5IiB5MT0iMTAwLjM4NSIgeDI9IjEzNC4zMDIiIHkyPSI2My45MSIgeGxpbms6aHJlZj0iI0YiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2IyZTJmZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBjYTVmYyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJGIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIvPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzkuMTg5IC02MC41MDQpIj48cGF0aCBkPSJNOTQuOTMgNjYuNjVsNjcuMjQgMzMuODk2LjIyIDczLjUyLTY4LjQzNy0zNS4zNnoiIGZpbGw9InVybCgjRCkiIGNsYXNzPSJCIi8+PHBhdGggZD0iTTEwMyAxMjkuMjRWODYuNDY3bDQ1Ljg1MyAyMi42OC4wMjQgNDMuOTYzeiIgZmlsbD0iIzAwNzNmYyIvPjxwYXRoIGQ9Ik0xMDYuNzI4IDEyNi45bC4wMDMtMzQuMzg1TDE0NS4xMiAxMTEuNGwuMDI0IDM1LjM0eiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xMDIuOTc3IDYzLjE4bDcwLjYzNCAzMy4yMzUtMTEuNDQyIDQuMTNMOTQuOTMgNjYuNjV6IiBmaWxsPSJ1cmwoI0UpIiBjbGFzcz0iQiIvPjxwYXRoIGQ9Ik0xNzMuNjEyIDk2LjQxNmwuODM1IDgzLjU5NC02NS44NSAzMi4wOC0uMTUtOS4zNjcgNTMuOTQ0LTI4LjY1OC0uMjItNzMuNTJ6IiBmaWxsPSJ1cmwoI0MpIiBjbGFzcz0iQiIvPjxwYXRoIGQ9Ik05My45NTIgMTM4LjcwNmw2OC40MzcgMzUuMzYtNTMuOTQ0IDI4LjY1OC02Ni43NDYtMzguMjN6IiBmaWxsPSJ1cmwoI0IpIiBjbGFzcz0iQiIvPjxwYXRoIGQ9Ik00MS43IDE2NC40OTVsNjYuNzQ2IDM4LjIzLjE1IDkuMzY3TDQxLjYyIDE3NC45NHoiIGZpbGw9InVybCgjQSkiIGNsYXNzPSJCIi8+PHBhdGggZD0iTTEwMy40MTYgNjAuNTA0bC0xMS40NzMgNS4zNzMuMDg4IDcxLjM3Ny01Mi44NDIgMjYuMDcyLjA0IDEzLjA1MyA2OS4yNDggMzcuODk2LjkyNC0uNDQ1IDY3LjM2LTMyLjM1NS0uMTY0LTg2LjMxOHptLS4wMSA0LjQyMmw2NS45NTcgMzEuMjMtNi45MjYgMi40NTMtNjMuODctMzEuNDE2em0tNy40NTcgNS40MzhsNjQuMzYgMzEuNjU4djY5LjExNUw5Ni4wMyAxMzcuMjl6bTc2LjY1NiAyOC44ODdsLjE1IDc5LjcxLTYyLjE2NCAyOS44Ni4wODQtNS4wNiA1My42MzUtMjguMTAydi03My40N3ptLTc4LjYwMiA0MS41TDE1OCAxNzQuNDQ1bC00OS4yOCAyNS44MjItNjMuMjUtMzUuNTg0em0tNTAuOCAyNy4yNTRsNjMuNDczIDM1LjcwNy0uMDg0IDQuOTgyLTYzLjM3LTM0LjY4eiIgZmlsbD0iI2ZmZiIgY2xhc3M9IkIiLz48L2c+PC9zdmc+"/>
+        <path d="M 51.37 227.1 L 263.63 230.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 46.12 227.02 L 53.17 223.63 L 51.37 227.1 L 53.06 230.62 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 268.88 230.45 L 261.83 233.84 L 263.63 230.37 L 261.94 226.84 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 345.37 231.05 L 423.63 231.7" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 340.12 231.01 L 347.15 227.57 L 345.37 231.05 L 347.09 234.57 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 428.88 231.74 L 421.85 235.18 L 423.63 231.7 L 421.91 228.18 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 315 520 L 415 520 L 415 620 L 315 620 Z" fill="rgb(255, 255, 255)" stroke="#666666" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 365 587.21 C 353.91 587.21 346 576.48 346 559.62 C 346 556.56 345.12 554.73 345.51 552.27 C 346.26 547.62 346.24 542.12 348.2 539.39 C 350.4 536.33 358.82 532 365 532" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 345.46 557.16 C 345.46 557.16 345.46 554.1 343.26 555.94 C 341.06 557.78 341.61 564.52 341.6 564.52 Q 342.15 569.42 342.7 570.65 C 343.25 571.87 342.7 571.87 344.35 573.71 C 346 575.54 348.75 576.15 348.75 576.16" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 353.29 582.13 C 353.29 582.13 355.5 597.04 344.21 598.88 C 340.36 599.5 328.28 605 325.52 607.45 C 322.76 609.9 321.41 613.16 320.71 616.22 Q 320 620 320 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 349.27 561.85 C 349.27 561.85 349.27 558.39 349.27 555.93 C 349.27 553.48 351.63 551.03 352.18 550.41 C 352.73 549.8 353.22 546.73 353.77 545.51 C 354.32 544.29 355.95 544.29 357.59 543.67 C 359.24 543.06 364.84 543.57 364.84 543.57" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 351.5 594.27 C 351.5 594.27 352.72 600.76 357.86 602.24 C 363.16 603.77 365.28 603.47 365.28 603.47" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 348.22 597.64 C 348.22 597.64 350.56 603.86 355.38 606.84 C 360.33 609.91 365.29 609.29 365.29 609.29" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 342.17 610 L 342.17 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 331.71 609.91 C 331.71 609.91 332.26 611.14 333.36 614.81 C 334.46 618.49 335 620 335 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 365 587.21 C 376.09 587.21 384 576.48 384 559.62 C 384 556.56 384.88 554.73 384.49 552.27 C 383.47 547.62 383.76 542.12 381.8 539.39 C 379.6 536.33 371.18 532 365 532" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 384.54 557.16 C 384.54 557.16 384.54 554.1 386.74 555.94 C 388.94 557.78 388.39 564.52 388.4 564.52 Q 387.85 569.42 387.3 570.65 C 386.75 571.87 387.3 571.87 385.65 573.71 C 384 575.54 381.25 576.15 381.25 576.16" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 376.71 582.13 C 376.71 582.13 374.5 597.04 385.79 598.88 C 389.64 599.5 401.72 605 404.48 607.45 C 407.24 609.9 408.59 613.16 409.29 616.22 Q 410 620 410 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 380.73 561.85 C 380.73 561.85 380.73 558.39 380.73 555.93 C 380.73 553.48 378.37 551.03 377.82 550.41 C 377.27 549.8 376.78 546.73 376.23 545.51 C 375.68 544.29 374.05 544.29 372.41 543.67 C 370.76 543.06 365.16 543.57 365.16 543.57" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 378.5 594.27 C 378.5 594.27 377.28 600.76 372.14 602.24 C 366.84 603.77 364.72 603.47 364.72 603.47" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 381.78 597.64 C 381.78 597.64 379.44 603.86 374.62 606.84 C 369.67 609.91 364.71 609.29 364.71 609.29" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 387.83 610 L 387.83 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 398.29 609.91 C 398.29 609.91 397.74 611.14 396.64 614.81 C 395.54 618.49 395 620 395 620" fill="none" stroke="#008cff" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 315 520 L 415 520 L 415 620 L 315 620 Z" fill="none" stroke="#666666" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 415 570 L 593.63 570" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 598.88 570 L 591.88 573.5 L 593.63 570 L 591.88 566.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 648px; margin-left: 341px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                Developer
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="341" y="648" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    Developer
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 628px; margin-left: 602px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                Github Actions
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="602" y="628" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    Github Actions
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 288px; margin-left: 292px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                ALB
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="292" y="288" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    ALB
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 288px; margin-left: 452px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                ECS
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="452" y="288" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    ECS
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 274px; margin-left: 14px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                Client
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="14" y="274" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    Client
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 108px; margin-left: 412px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                App side in AWS
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="412" y="108" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    App side in AWS
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 18px; margin-left: 232px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                AWS Account
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="232" y="18" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    AWS Account
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 214px; margin-left: 124px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                request
+                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; background-color: rgb(42, 37, 47);">
+                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
+                                </span>
+                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; background-color: rgb(42, 37, 47);">
+                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="124" y="214" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    request%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Client%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22310%22%20y%3D%22360%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-288%22%20y%3D%22-24%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 254px; margin-left: 124px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                response
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="124" y="254" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px">
+                    response
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
