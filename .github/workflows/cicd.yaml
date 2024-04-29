@@ -1,0 +1,13 @@
+name: Build Docker Container
+
+on:
+  push:
+    paths:
+      - 'web/index.html'  
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
