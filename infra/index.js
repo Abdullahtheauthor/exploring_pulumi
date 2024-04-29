@@ -3,6 +3,8 @@ const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
 
+
+// This must be changed according to your ip
 const myip="154.180.63.67";
 
 
