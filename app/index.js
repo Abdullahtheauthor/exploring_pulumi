@@ -84,6 +84,5 @@ const service = new awsx.ecs.FargateService("service", {
     },
 });
 exports.url = repository.url;
-// exports.endpoint = lb.loadBalancer.dnsName;
-// exports.url = pulumi.interpolate`http://${lb.loadBalancer.dnsName}`;
+
 
