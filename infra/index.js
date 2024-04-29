@@ -3,6 +3,10 @@ const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
 
+const myip="154.180.63.67";
+
+
+
 // Allocate a new VPC with the default settings.
 const vpc = new awsx.ec2.Vpc("vpc",{
     subnetSpecs: [
@@ -20,14 +24,14 @@ const vpc = new awsx.ec2.Vpc("vpc",{
 
 
 // SG
-const securityGroup = new aws.ec2.SecurityGroup("group", {
+const securityGroup = new aws.ec2.SecurityGroup("elb_sg", {
     vpcId: vpc.vpcId,
     ingress: [
         {
             fromPort: 80,
             toPort: 80,
             protocol: "tcp",
-            cidrBlocks: ["0.0.0.0/0"],
+            cidrBlocks: [`${myip}/32`],
         },
 
     ],
@@ -42,9 +46,9 @@ const securityGroup = new aws.ec2.SecurityGroup("group", {
 });
 
 console.log(vpc.vpcId);
-exports.SgId = securityGroup.id 
 
-// Loadbalancer
+
+//Loadbalancer
 const lb = new awsx.lb.ApplicationLoadBalancer("lb", {
     
     listener: {
@@ -59,6 +63,7 @@ const lb = new awsx.lb.ApplicationLoadBalancer("lb", {
 exports.vpcId = vpc.vpcId;
 exports.privateSubnetIds = vpc.privateSubnetIds;
 exports.publicSubnetIds = vpc.publicSubnetIds;
+exports.SgId = securityGroup.id 
 exports.tg =lb.defaultTargetGroup
 // // // export const vpcId = vpc.id;
 // // // export const publicSubnetId = publicSubnet.id;

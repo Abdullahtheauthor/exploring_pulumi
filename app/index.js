@@ -6,6 +6,7 @@ const awsx = require("@pulumi/awsx");
 const stack_ref = "Abdullahtheauthor/infrastructure/dev"
 const outputs= new pulumi.StackReference(stack_ref);
 const privateSubnetIds = outputs.getOutput("privateSubnetIds");
+const vpcId = outputs.getOutput("vpcId");
 
 
 const publicSubnetIds = outputs.getOutput("publicSubnetIds");
@@ -13,6 +14,28 @@ const publicSubnetIds = outputs.getOutput("publicSubnetIds");
 const SecurityGroupId = outputs.getOutput("SgId");
 const tg= outputs.getOutput("tg")
 
+
+// SG
+const securityGroup = new aws.ec2.SecurityGroup("ecs_sg", {
+    vpcId: vpcId,
+    ingress: [
+        {
+            fromPort: 80,
+            toPort: 80,
+            protocol: "tcp",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+
+    ],
+    egress: [
+        {
+            fromPort: 0,
+            toPort: 0,
+            protocol: "-1",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+    ],
+});
 
 // ecr
 const repository = new awsx.ecr.Repository("repository", {
@@ -30,13 +53,18 @@ const image = new awsx.ecr.Image("image", {
 
 
 
+
+
+
+
+
 // // esc
 const cluster = new aws.ecs.Cluster("cluster");
 const service = new awsx.ecs.FargateService("service", {
     cluster: cluster.arn,
     networkConfiguration: {
         subnets: privateSubnetIds,
-        securityGroups: [SecurityGroupId.id],
+        securityGroups: [securityGroup.id],
     },
     desiredCount: 2,
     taskDefinitionArgs: {

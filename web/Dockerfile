@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 nginx:latest
+FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html/
 COPY nyan.gif /usr/share/nginx/html/
