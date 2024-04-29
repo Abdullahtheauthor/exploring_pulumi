@@ -44,7 +44,7 @@ The solution is divided into three folders:
    - Build it after changing the stack yaml file to the specific region you want to deploy the app to.
 4. If you changed the index.html file and pushed your changed to your repo, it would automatically deploy it to your AWS ECS created in step 2.
 
-## Notes:
+#### Notes:
 - I didn't open the app to public access, for security reasons. The user should assign the const `myip` in [index.js](./infra/index.js).
   
 
