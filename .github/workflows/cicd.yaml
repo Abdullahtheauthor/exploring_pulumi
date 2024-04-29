@@ -1,4 +1,4 @@
-name: Build Docker Container
+name: Build and deploy Docker Container
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - 'web/index.html'      # this will ignore any other file changes
     # paths-ignore:           # We can use this line to explicitly ignore the README.md file
     #   - 'web/README.md'
+
 
 env:
     AWS_REGION : eu-central-1 
@@ -22,7 +23,7 @@ permissions:
     id-token: write   # This is required for requesting the JWT
     contents: read    # This is required for actions/checkout
 jobs:
-  AssumeRoleAndCallIdentity:
+  Build_deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Git clone the repository
