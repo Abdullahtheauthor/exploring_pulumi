@@ -2,19 +2,18 @@ name: Build Docker Container
 
 on:
   push:
-    # paths:
-    #   - 'web/index.html'  
+    paths:
+      - 'web/index.html'  
 
 env:
     AWS_REGION : eu-central-1 
-    ECR_REPOSITORY: nginx_server           # set this to your Amazon ECR repository name
-    ECS_SERVICE: service-1e4f730                 # set this to your Amazon ECS service name
-    ECS_CLUSTER: cluster-abef79a	                 # set this to your Amazon ECS cluster name
-    ECS_TASK_DEFINITION: .aws/task-definition.json
-    # set this to the path to your Amazon ECS task definition
-                                                 # file, e.g. .aws/task-definition.json
-    CONTAINER_NAME: my-service           # set this to the name of the container in the
-                                                 # containerDefinitions section of your task definition
+    ECR_REPOSITORY: nginx_server                    # set this to your Amazon ECR repository name
+    ECS_SERVICE: service-1e4f730                    # set this to your Amazon ECS service name
+    ECS_CLUSTER: cluster-abef79a	                # set this to your Amazon ECS cluster name
+    ECS_TASK_DEFINITION: .aws/task-definition.json  # set this to the path to your Amazon ECS task definition
+                                                    # file, e.g. .aws/task-definition.json
+    CONTAINER_NAME: my-service                      # set this to the name of the container in the
+                                                    # containerDefinitions section of your task definition
 
 # Permission can be added at job level or workflow level    
 permissions:
