@@ -29,7 +29,7 @@ The solution is divided into three folders:
 1. The developer do his changes in index.html, as required. 
 2. The developer creates the infra and the apps using the two stacks.
 3. The developer needs to make changes in the index.html, and pushes it in the repo.
-4. Github action (cicd.yaml file), will get triggered, build the new image, push it to ECR and then deploys it in ECS.
+4. Github action (cicd.yaml file), will get triggered on changes in [index.html](./web/index.html), build the new image, push it to ECR and then deploys it in ECS.
 5. Any changes to README.md file won't trigger the pipeline, as requested.
 6. Clients can access the application using the ALB dns name.
 

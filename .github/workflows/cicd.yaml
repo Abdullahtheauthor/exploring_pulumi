@@ -3,7 +3,9 @@ name: Build Docker Container
 on:
   push:
     paths:
-      - 'web/index.html'  
+      - 'web/index.html'      # this will ignore any other file changes
+    # paths-ignore:           # We can use this line to explicitly ignore the README.md file
+    #   - 'web/README.md'
 
 env:
     AWS_REGION : eu-central-1 
