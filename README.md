@@ -4,42 +4,31 @@ Configure your AWS credentials and region environment variables to be able to bu
 This repo offers a solution of automating the creation of simple infra and deplying tha a simpe nginx app in AWS ECS using Pulumi javascript. The infra includes the following:
 -  ECS: To deploy the app too.
 -  Application Load Balancer
--  ECR: To store the image in private repo
+-  ECR: To store the image in private repo.
   
 # Overview:
 The solution is divided into three folders:
 - Stack (Pulumi js) in ./infra, which deploys the basic infrastructure of the solution. It includes VPC, security groups and a Application Loadbalancer.
-- Stack (Pulumi js) in ./app, which deploys the ecr, builds
+- Stack (Pulumi js) in ./app, which deploys the ecr, builds, and push the image to private repo. Then, it deploys the container from that image into ECS.
+- Workflow file (Github actions), to deploy the app to ECS depending on the conditions required.
 
-# TODO
- - Github Workflow for packaging --> in progress
- - Populate API Documentation for Devs --> in progress
- - Data sorces
- - API Gateway, add dynamic API body instead of importing the json code
- - How properly handle package versioning?
-- Mandatory tags should be added to all resources automatically --> done
-- Add env variables for envisronment and project name --> done
-- The CI pipeline can use https://github.com/dorny/paths-filter to create path-filter for changed packages. Tested the matrix sample but there was a known unresolved issue with checkout step
-- put variables for lables in claim files instead of hardcoded values --> done
-- research: metrics object to get metrics for prometheus 
+# Architecture:
+1. A VPC that has the two security groups. One for the Loadbalancer(ALB), and the other is for AWS ECS (In stack, ./infra).
+2. A LoadBalancer (ALB), which only allow access to an IP that you can set in a variable; for security measurments (In stack, ./infra).
+3. ECR, Where we push our image to (In stack, ./app).
+4. ECS, Where the app is deployed to as a container (In stack, ./app).
 
-# Notes
-- In current setup we are not using s3 as static webhosting because public access is blocked from higher leveles. Even though the S3-website folder consists of working webhosting composition
 
-# Packaging
-- Packages will be created automatically as part of CI. 
-- The package should be installed on cluster using package-config.yaml file
-- For the Crossplane to access a private Repository a secret is required as imagePullRequest 
 
-```
-kubectl create secret docker-registry package-pull-secret --docker-server=https://artifactory.vodafone.com \
-        --docker-username=jfrog_user --docker-password=jfrog_token \
-        --docker-email=jfrog_email -n crossplane-system
-```
 
-# Resources
-https://github.com/upbound/upjet/blob/main/docs/sizing-guide.md
+# Using this repo in details:
+1. you need to set uo your aws profile in your terminal using Env variables:
+   `export AWS_PROFILE=<ypu-aws-profile-name>`
+2. change dir to the first stack in dir (infra). 
+   - Build it after changing the stack yaml file to the specific region you want to deploy the app to.
+3. change dir to you second stack (app). 
+   - Build it after changing the stack yaml file to the specific region you want to deploy the app to.
+4. If you changed the index.html file and pushed your changed to your repo, it'd automatically deploy it to your AWS ECS created in step 2.
 
-https://github.com/upbound/platform-ref-aws/
 
-https://github.com/upbound/universal-crossplane#upgrade-from-upstream-crossplane
+
