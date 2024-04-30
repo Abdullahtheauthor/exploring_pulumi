@@ -5,7 +5,7 @@ const awsx = require("@pulumi/awsx");
 
 
 // This must be changed according to your ip
-const myip="154.180.143.248";
+const myip="add_your_ip";
 
 
 
