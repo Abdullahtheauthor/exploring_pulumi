@@ -46,6 +46,7 @@ The solution is divided into three folders:
 
 #### Notes:
 - I didn't open the app to public access, for security reasons. The user should assign the const `myip` in [index.js](./infra/index.js).
+- I used AWS roles to access my AWS accounts by Github Actions runners. I created this role manually by creating identity provider forllowing the documentatoin, which I listed below. I could have used AWS Secret and Access Keys and put them as s secrets in github. However, using role is the best option for security reasons.
   
 
 
@@ -58,6 +59,12 @@ The solution is divided into three folders:
 1. Using Ec2, manged by Devops team, instead of fargate serverless. This will give us more control. I didn't go for this approach, as it'd make the solution more complex.
 2. Instead of ECS, We can Auto Scaling group with Ec2, that has docker installed on it, and has role with permissions to pull images from ECR. Infront of them, we have ALB with WAF, if needed.
 3. Instead of ECS, we can use EKS. I didn't choose this option, as the app is simple and it isn't going to use the capabilities EKS offers; so it'd be overengineering.
+
+
+## Resource:
+### Setting github actions role in AWS:
+https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/
+
    
 
 
